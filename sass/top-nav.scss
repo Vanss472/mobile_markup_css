@@ -1,0 +1,184 @@
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index:60
+}
+
+.navbar {
+    position: relative;
+    z-index: 61;
+    margin: 0;
+    
+    .brand {
+      height: 41px;
+      padding: 10px 0px 0 15px;
+      margin: 0;
+      img {
+        padding: 0;
+      }
+    }
+
+    .btn-navbar {
+      display: block;
+    }
+
+    .navbar-inner {
+      padding: 0;
+      @include roundedCorners(0px);
+    }
+
+    .header-logo {
+      width: 108px;
+      padding-left: 15px;
+    }
+
+    .dropdown-button, .search-button {
+      width:48px;
+      height:48px;
+      margin: 0;
+      padding: 0;
+      background-position: center !important;
+      background-repeat: no-repeat;
+      position: absolute;
+    }
+
+    .dropdown-button {
+      right: 0px;
+      background-image: url(/global/img/icon-topnav-open-38x34.png) !important;
+      background-size: 19px 17px;
+      z-index: 62;
+      border-left: 1px solid transparent !important;
+      &.open {
+        background-color: white !important;
+        background-image: url(/global/img/icon-topnav-close-28x28.png) !important;
+        border-left: 1px solid black !important;
+        background-size: 14px;
+        height: 51px;
+      }
+    }
+
+    .search-button {
+      right: 48px;
+      background-size: 20px;
+      background-image: url(/global/img/icon-search.svg) !important;
+    }
+
+    .navbar-inner, .btn-navbar, .btn-search {
+      &, &:hover {
+        background-color: $lighter-grey;
+        background-image: none;
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    .navigation-collapse {
+      clear: both;
+      position: relative;
+      z-index: 61;
+      &.in {
+        border-top: 1px solid black;
+      }
+    }
+
+    .form-search {
+      margin: 5px 0 10px 0;
+      padding: 0 6px 0 14px;
+
+      input {
+        box-shadow: none;
+        @include roundedCorners(0px);
+        height: 19px;
+        float: left;
+        // min-width: 78%;
+        width: 78%;
+      }
+      .search-submit-button {
+        width: 30px;
+        height: 29px;
+        background: url(/global/img/icon-search-blue.png) no-repeat;
+        background-size: 30px 29px;
+        float: left;
+        cursor: pointer;
+      }
+      input[type="text"]:invalid + input[type="reset"] {
+        display: none;
+      }
+
+      input[type="reset"] {
+        background: url(/global/img/icon-search-close.png) center center no-repeat;
+        background-size: 22px 22px;
+        height: 22px;
+        width: 22px;
+        border: none;
+        cursor: pointer;
+        margin-left: -36px;
+        margin-top: 4px;
+      }
+      .fadeIn {
+        opacity:0;
+        -webkit-animation:fadeIn ease-in 1;
+        -moz-animation:fadeIn ease-in 1;
+        -o-animation:fadeIn ease-in 1;
+        animation:fadeIn ease-in 1;
+        -webkit-animation-fill-mode:forwards;
+        -moz-animation-fill-mode:forwards;
+        -o-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
+      }
+      .fadeIn-1s {
+        -webkit-animation-duration:1s;
+        -moz-animation-duration:1s;
+        -o-animation-duration:1s;
+        animation-duration:1s;
+      }
+      input:focus {
+        border: 1px solid #CCC;
+        color: #999999;
+        box-shadow: none;
+      }
+    }
+
+}
+
+.menu-list {
+  // border-top:1px solid #949ba1;
+  background: white;
+  list-style-type: none;
+  color: $text-color;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-indent: $mobile-text-padding;
+  padding-top: 10px;
+  margin: 0;
+
+  li a {
+    display: block;
+    background: url('/global/img/icon-chevron-right.png') no-repeat;
+    background-position: 98% 13px;
+    background-size: 14px 14px;
+    border-bottom: 1px solid $light-grey;
+    line-height: 2.5em;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    li a {
+      text-transform: capitalize;
+      padding: 0 15px;
+    }
+  }
+
+  & > li:nth-child(n+4) a {
+    color: $lighter-grey;
+    background: #4a555b url('/global/img/arrow-menu-right-white.png') no-repeat;
+    background-position: 98% 13px;
+    background-size: 14px 14px;
+    border-bottom: 1px solid #0a0a0a;
+  }
+
+}
+
+

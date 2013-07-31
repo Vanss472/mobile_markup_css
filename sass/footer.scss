@@ -1,0 +1,67 @@
+.footer {
+  height: 60px;
+  margin-top: 36px;
+  @include box-shadow(0, -2px, 8px, rgba(0,0,0,.3));
+
+  .navbar  {
+    padding: 0;
+    height: 61px;
+    z-index: 0;
+
+    .nav {
+      width: 100%;
+      margin: 0;
+      @include gradient(#dfdfdf, #d0d0d0);
+
+      li {
+        display: block;
+        width: 33%;
+        float: left;
+        line-height: 41px;
+
+        &:first-child a {
+          border-left: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        &:last-child a {
+          border-right: 0;
+          border-radius: 0 3px 3px 0;
+        }
+
+        a {
+          font-size: 10px;
+          color: #333;
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+          border-right: 1px solid rgba(255,255,255,.75);
+          border-left: 1px solid rgba(0,0,0,.2);
+          text-shadow: none;
+          padding: 10px 6px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.full-site-link {
+  text-align:center;
+  a {
+    height: 54px;
+    font-size: 18px;
+    line-height: 54px;
+  }
+
+}
+
+
+
+
+
+
+

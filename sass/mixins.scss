@@ -1,0 +1,161 @@
+// SCSS Mixins
+//
+// Styleguide 13
+
+//////////////////////////////////
+//  Variables
+//////////////////////////////////
+
+$text-color: #5f5f5f;
+$link-blue: #5796b9;
+$light-blue: #4790b9;
+$dark-blue: #427a9b;
+$darker-blue: #141923;
+$dark-grey: #585858;
+$light-grey: #d7d7d7;
+$lighter-grey: #efefef;
+$brownish-grey: #362f2d;
+
+$helvetica: Helvetica, Arial, sans-serif;
+$antenna-heavy: "Antenna Black", Helvetica, Arial, sans-serif;
+$antenna-medium: "Antenna Medium", Helvetica, Arial, sans-serif;
+$antenna-regular: "Antenna Regular", Helvetica, Arial, sans-serif;
+$antenna-light: "Antenna ExtraLight", Helvetica, Arial, sans-serif;
+
+$mobile-text-padding: 25px;
+$standard-vert-margin: 16px;
+$baseLineHeight: 20px;
+
+//////////////////////////////////
+//  Utility Mixins
+//////////////////////////////////
+
+// prefixer
+//
+// Adds browser prefixes to passed-in properties.<br />
+// @include prefixer ($property, $value)
+//
+// $property - the property to be prefixed.<br />
+// $value - the value assigned to the property.
+//
+// Compatibility untested.
+//
+// Styleguide 13.1
+@mixin prefixer ($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// roundedCorners
+//
+// Adds rounded corners of specified radius.<br />
+// @include roundedCorners($radius)
+//
+// $radius - The border radius to be applied (in px). Defaults to 6px.
+//
+// Compatibility untested.
+//
+// Styleguide 13.2
+@mixin roundedCorners($radius: 6px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// transform
+//
+// Applies a prefixed CSS transform.<br />
+// @include transform($property)
+//
+// $property - the CSS transform property to be applied.
+//
+// Compatibility untested.
+//
+// Styleguide 13.3
+@mixin transform($property: none) {
+  @include prefixer(transform, $property);
+}
+
+// rotate
+//
+// Applies a CSS rotation of specified degrees (e.g. '45deg').<br />
+// @include rotate($deg)
+//
+// $deg - the degrees to rotate the element.
+//
+// Compatibility untested.
+//
+// Styleguide 13.3
+@mixin rotate($deg) {
+  @include transform(rotate($deg));
+}
+
+// box-shadow
+//
+// Box-shadow implement multiple drop shadows (outer or inner).<br />
+// @include box-shadow($top, $left, $blur, $color, $inset: false);
+//
+// Styleguide 13.5
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  -moz-box-shadow: $top $left $blur $color;
+  -webkit-box-shadow: $top $left $blur $color; 
+  box-shadow: $top $left $blur $color;
+}
+
+// gradient
+//
+// Linear Gradient (Top → Bottom).<br />
+// @include gradient($from, $to);
+//
+// $from - start color.<br />
+// $to - end color.
+//
+// Compatibility tested.
+//
+// Styleguide 13.6
+@mixin gradient($from, $to) {
+  background: $from;  
+  background: -moz-linear-gradient(top, $from 10%, $to 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(10%, $from), to(100%, $to)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $from 10%, $to 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $from 10%, $to 100%); /* Opera 11.10+ */
+}
+
+@mixin triangle($size, $color) {
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-left: $size solid $color;
+}
+
+@mixin buttonBase {
+  width: auto;
+  padding: 0;
+  display: block;
+  font-family: $helvetica;
+  font-weight: bold;
+  margin: 10px ($mobile-text-padding);
+  text-transform: uppercase;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: $link-blue;
+  color: white;
+  border: none;
+  &:hover, &:active, &:visited {
+    color: white;
+  }
+}
+
+/* Key Frames
+---------------------------------------------------- */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+

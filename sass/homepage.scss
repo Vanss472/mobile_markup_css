@@ -1,0 +1,107 @@
+.homepage {
+  background: $darker-blue;
+
+  h1 {
+    font-family: $antenna-heavy;
+    color: white;
+    font-size: 18px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.row-wrapper {
+  margin: 10px 10px 14px;
+  border: 1px solid black;
+
+
+  p {
+    color: white;
+    font-family: $antenna-regular;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    margin-bottom: 0;
+    background: #222a3b;
+    border-bottom: 1px solid #2b374d;
+  }
+
+  a { display: table-cell; border: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+  .span6 {
+    width: 460px;
+    padding: 0;
+    display: table-cell;
+    float: none;
+    background: #2b374d;
+    border-top: 1px solid #222a3b;
+    border-right: 1px solid #222a3b;
+    border-bottom: 1px solid #3b4355;
+
+      .img-title {
+        width: 92px;
+        height: 41px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 15px;
+
+        img {
+          width: 92px;
+          height: 92px;
+          margin-top: 6px;
+        }
+
+        
+      }
+
+      h2 {
+          background: rgb(0, 0, 0); /* fallback color */
+          background: rgba(0, 0, 0, 0.5);
+          font-family: $antenna-heavy;
+          color: white;
+          font-size: 14px;
+          text-align: left;
+          position: relative;
+          top: -8px;
+          right: 0;
+          line-height: 1.2em;
+          padding: 5.7px 7px;
+          display: inline-block;
+
+          &.float {
+            float: right;
+            right: -1px;
+            text-align: right;
+
+            &.twoLines {
+              padding: 0 7px;
+              margin: 0.1em;
+              width: 75px;
+            }
+          }
+        }
+  }
+}
+
+
+@media all and (min-width: 640px) {
+  .icon-close {
+    top: -3px;
+  }
+
+  .row-wrapper {
+    // width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+
+    .row {
+      margin-left: 0;
+      background: #2b374d; 
+    }
+
+    .span6 {
+      width: 740px;
+    }
+  }
+}
