@@ -44,13 +44,13 @@
 
     .dropdown-button {
       right: 0px;
-      background-image: url(/global/img/icon-topnav-open-38x34.png) !important;
+      background-image: url(/icon-topnav-open-38x34.png) !important;
       background-size: 19px 17px;
       z-index: 62;
       border-left: 1px solid transparent !important;
       &.open {
         background-color: white !important;
-        background-image: url(/global/img/icon-topnav-close-28x28.png) !important;
+        background-image: url(/icon-topnav-close-28x28.png) !important;
         border-left: 1px solid black !important;
         background-size: 14px;
         height: 51px;
@@ -60,7 +60,7 @@
     .search-button {
       right: 48px;
       background-size: 20px;
-      background-image: url(/global/img/icon-search.svg) !important;
+      background-image: url(/icon-search.svg) !important;
     }
 
     .navbar-inner, .btn-navbar, .btn-search {
@@ -96,7 +96,7 @@
       .search-submit-button {
         width: 30px;
         height: 29px;
-        background: url(/global/img/icon-search-blue.png) no-repeat;
+        background: url(/icon-search-blue.png) no-repeat;
         background-size: 30px 29px;
         float: left;
         cursor: pointer;
@@ -106,7 +106,7 @@
       }
 
       input[type="reset"] {
-        background: url(/global/img/icon-search-close.png) center center no-repeat;
+        background: url(/icon-search-close.png) center center no-repeat;
         background-size: 22px 22px;
         height: 22px;
         width: 22px;
@@ -154,7 +154,7 @@
 
   li a {
     display: block;
-    background: url('/global/img/icon-chevron-right.png') no-repeat;
+    background: url('/icon-chevron-right.png') no-repeat;
     background-position: 98% 13px;
     background-size: 14px 14px;
     border-bottom: 1px solid $light-grey;
@@ -173,7 +173,7 @@
 
   & > li:nth-child(n+4) a {
     color: $lighter-grey;
-    background: #4a555b url('/global/img/arrow-menu-right-white.png') no-repeat;
+    background: #4a555b url('/arrow-menu-right-white.png') no-repeat;
     background-position: 98% 13px;
     background-size: 14px 14px;
     border-bottom: 1px solid #0a0a0a;
